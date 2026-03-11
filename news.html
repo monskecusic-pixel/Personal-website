@@ -36,54 +36,33 @@
             <p>最新 AI 行业动态与深度洞察</p>
         </section>
 
+        <!-- Modal for adding articles -->
+        <div id="addArticleModal" class="modal" style="display:none; position: fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8); z-index:2000; align-items:center; justify-content:center;">
+            <div style="background:#1e1e1e; padding:30px; border-radius:10px; width:90%; max-width:500px; border:1px solid var(--accent-color);">
+                <h3 style="color:var(--accent-color); margin-bottom:20px;">添加新文章</h3>
+                <input type="text" id="newArticleTitle" placeholder="文章标题" style="width:100%; padding:10px; margin-bottom:10px; background:#333; color:#fff; border:1px solid #555;">
+                <input type="text" id="newArticleSource" placeholder="来源/作者" style="width:100%; padding:10px; margin-bottom:10px; background:#333; color:#fff; border:1px solid #555;">
+                <input type="date" id="newArticleDate" style="width:100%; padding:10px; margin-bottom:10px; background:#333; color:#fff; border:1px solid #555;">
+                <textarea id="newArticleSummary" placeholder="摘要简介" rows="4" style="width:100%; padding:10px; margin-bottom:20px; background:#333; color:#fff; border:1px solid #555;"></textarea>
+                <input type="text" id="newArticleLink" placeholder="原文链接 (可选)" style="width:100%; padding:10px; margin-bottom:20px; background:#333; color:#fff; border:1px solid #555;">
+                <div style="text-align:right;">
+                    <button onclick="document.getElementById('addArticleModal').style.display='none'" style="padding:8px 20px; margin-right:10px; background:transparent; border:1px solid #666; color:#aaa; cursor:pointer;">取消</button>
+                    <button onclick="saveNewArticle()" style="padding:8px 20px; background:var(--accent-color); border:none; color:#000; cursor:pointer; font-weight:bold;">保存</button>
+                </div>
+            </div>
+        </div>
+
         <section class="news-section">
             <h2>行业精选</h2>
-            <div class="news-grid">
-                <!-- News 1 -->
-                <div class="news-card">
-                    <div class="news-source">机器之心</div>
-                    <div class="news-date">2026-03-10</div>
-                    <h3>GPT-5 发布：多模态能力再升级</h3>
-                    <p class="news-summary">OpenAI 最新发布的 GPT-5 在推理能力和多模态理解上取得了突破性进展，不仅能处理文本和图像，还能实时理解视频内容...</p>
-                    <a href="#" class="read-more">阅读全文 &rarr;</a>
-                </div>
-                <!-- News 2 -->
-                <div class="news-card">
-                    <div class="news-source">雷锋网</div>
-                    <div class="news-date">2026-03-09</div>
-                    <h3>AI 训练师人才缺口扩大</h3>
-                    <p class="news-summary">随着大模型应用落地的加速，具备数据清洗、Prompt 工程和 RLHF 经验的 AI 训练师成为企业争抢的热门人才...</p>
-                    <a href="#" class="read-more">阅读全文 &rarr;</a>
-                </div>
-                <!-- News 3 -->
-                <div class="news-card">
-                    <div class="news-source">机器之心</div>
-                    <div class="news-date">2026-03-08</div>
-                    <h3>Sora 2.0 公测开启：电影级视频生成</h3>
-                    <p class="news-summary">Sora 2.0 带来了更长的视频生成时长和更精准的物理模拟能力，将彻底改变影视制作和广告创意行业的工作流...</p>
-                    <a href="#" class="read-more">阅读全文 &rarr;</a>
-                </div>
+            <div class="news-grid" id="industryNewsGrid">
+                <!-- Static items removed, loaded by JS -->
             </div>
         </section>
 
         <section class="personal-articles">
             <h2>我的思考</h2>
-            <div class="news-grid">
-                <!-- Article Placeholder 1 -->
-                <div class="news-card" style="border-color: var(--accent-color);">
-                    <div class="news-source">原创文章</div>
-                    <div class="news-date">2026-02-20</div>
-                    <h3>如何高效构建高质量的 SFT 数据集</h3>
-                    <p class="news-summary">在微调大模型时，数据质量远比数量重要。本文分享我在构建指令微调数据集时的实战经验和清洗策略...</p>
-                    <a href="#" class="read-more">阅读全文 &rarr;</a>
-                </div>
-                <!-- Add Article Slot -->
-                <div class="news-card" style="display: flex; align-items: center; justify-content: center; border-style: dashed;">
-                    <div style="text-align: center;">
-                        <h3 style="color: #666;">+ 添加新文章</h3>
-                        <p style="color: #666; font-size: 0.8rem;">粘贴链接或上传文件</p>
-                    </div>
-                </div>
+            <div class="news-grid" id="personalArticlesGrid">
+                <!-- Static items removed, loaded by JS -->
             </div>
         </section>
     </main>

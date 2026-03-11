@@ -36,76 +36,34 @@
             <p>高效生产力工具与自动化流程分享</p>
         </section>
 
+        <!-- Modal for adding tools -->
+        <div id="addToolModal" class="modal" style="display:none; position: fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8); z-index:2000; align-items:center; justify-content:center;">
+            <div style="background:#1e1e1e; padding:30px; border-radius:10px; width:90%; max-width:500px; border:1px solid var(--accent-color);">
+                <h3 style="color:var(--accent-color); margin-bottom:20px;">添加新工具</h3>
+                <input type="text" id="newToolName" placeholder="工具名称" style="width:100%; padding:10px; margin-bottom:10px; background:#333; color:#fff; border:1px solid #555;">
+                <textarea id="newToolDesc" placeholder="工具描述" rows="3" style="width:100%; padding:10px; margin-bottom:10px; background:#333; color:#fff; border:1px solid #555;"></textarea>
+                <input type="text" id="newToolLink" placeholder="工具链接" style="width:100%; padding:10px; margin-bottom:20px; background:#333; color:#fff; border:1px solid #555;">
+                <div style="text-align:right;">
+                    <button onclick="document.getElementById('addToolModal').style.display='none'" style="padding:8px 20px; margin-right:10px; background:transparent; border:1px solid #666; color:#aaa; cursor:pointer;">取消</button>
+                    <button onclick="saveNewTool()" style="padding:8px 20px; background:var(--accent-color); border:none; color:#000; cursor:pointer; font-weight:bold;">保存</button>
+                </div>
+            </div>
+        </div>
+
         <section class="tools-section">
-            <h2>常用 AI 工具</h2>
-            <div class="tools-list">
-                <!-- Tool 1 -->
-                <div class="tool-item">
-                    <div class="tool-info">
-                        <h3>Claude 3 Opus / Sonnet</h3>
-                        <p>主要用于长文本分析、代码生成及复杂逻辑推理任务。</p>
-                    </div>
-                    <div class="tool-actions">
-                        <a href="#" class="btn-small">查看详情</a>
-                    </div>
-                </div>
-                <!-- Tool 2 -->
-                <div class="tool-item">
-                    <div class="tool-info">
-                        <h3>飞书多维表格 (Feishu Base)</h3>
-                        <p>用于构建数据标注工作流、任务分发及进度管理系统。</p>
-                    </div>
-                    <div class="tool-actions">
-                        <a href="#" class="btn-small">查看模板</a>
-                    </div>
-                </div>
-                <!-- Tool 3 -->
-                <div class="tool-item">
-                    <div class="tool-info">
-                        <h3>Prompt Engineering Toolkit</h3>
-                        <p>自研提示词优化工具，支持 A/B 测试与版本管理。</p>
-                    </div>
-                    <div class="tool-actions">
-                        <a href="#" class="btn-small">下载工具</a>
-                    </div>
-                </div>
-                <!-- Tool 4 -->
-                <div class="tool-item">
-                    <div class="tool-info">
-                        <h3>Label Studio</h3>
-                        <p>开源数据标注平台，用于文本分类、NER 及图像标注任务。</p>
-                    </div>
-                    <div class="tool-actions">
-                        <a href="#" class="btn-small">查看文档</a>
-                    </div>
-                </div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                <h2>常用 AI 工具</h2>
+                <button onclick="document.getElementById('addToolModal').style.display='flex'" class="btn-small" style="background:transparent; cursor:pointer;">+ 添加工具</button>
+            </div>
+            <div class="tools-list" id="toolsList">
+                <!-- Static items removed, loaded by JS -->
             </div>
         </section>
 
         <section class="workflow-section" style="margin-top: 50px;">
             <h2>工作流分享</h2>
-            <div class="news-grid">
-                <!-- Workflow 1 -->
-                <div class="news-card">
-                    <div class="news-source">自动化流程</div>
-                    <h3>AI 资讯自动抓取与摘要</h3>
-                    <p class="news-summary">基于 Python + OpenAI API 的每日资讯自动抓取脚本，自动生成摘要并推送至飞书群。</p>
-                    <a href="#" class="read-more">下载脚本 &darr;</a>
-                </div>
-                <!-- Workflow 2 -->
-                <div class="news-card">
-                    <div class="news-source">SOP</div>
-                    <h3>大模型数据清洗 SOP</h3>
-                    <p class="news-summary">包含数据去重、敏感词过滤、格式规范化等步骤的完整标准操作程序文档。</p>
-                    <a href="#" class="read-more">下载文档 &darr;</a>
-                </div>
-                <!-- Add Workflow -->
-                <div class="news-card" style="display: flex; align-items: center; justify-content: center; border-style: dashed;">
-                    <div style="text-align: center;">
-                        <h3 style="color: #666;">+ 导入工作流</h3>
-                        <p style="color: #666; font-size: 0.8rem;">支持 .json / .yaml 文件</p>
-                    </div>
-                </div>
+            <div class="news-grid" id="workflowGrid">
+                <!-- Static items removed, loaded by JS -->
             </div>
         </section>
     </main>
