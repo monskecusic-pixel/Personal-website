@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>求职意向 - AI Trainer Portfolio</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">PORTFOLIO</div>
+            <ul class="nav-links">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="news.html">AI 资讯</a></li>
+                <li><a href="tools.html">工具栈</a></li>
+                <li><a href="career.html" class="active">求职意向</a></li>
+            </ul>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <div class="floating-bar">
+        <div class="close-btn">&times;</div>
+        <img src="images/wechat-qr-placeholder.png" alt="WeChat QR Code" style="background: #fff;">
+        <p>加微信获取<br>AI 求职专属资料包</p>
+    </div>
+
+    <main class="container">
+        <section class="page-header">
+            <h1>求职意向 | 技能栈</h1>
+            <p>专业背景与核心竞争力展示</p>
+        </section>
+
+        <section class="career-section">
+            <div class="job-intent-bar">
+                <h2>求职岗位：</h2>
+                <div class="position" contenteditable="true">AI 训练师 / AI 产品经理</div>
+                <div style="font-size: 0.8rem; color: #666; margin-top: 5px;">(点击可编辑)</div>
+            </div>
+
+            <div class="profile-section">
+                <div class="profile-img">
+                    <div class="placeholder-avatar">Profile</div>
+                </div>
+                <div class="profile-text">
+                    <h1>AI 训练师</h1>
+                    <h2>专注于大模型落地应用</h2>
+                    <p>具备丰富的数据标注与清洗经验，精通 Prompt Engineering，致力于提升模型回复质量与安全性。熟悉 RLHF 流程，能够设计高效的标注 SOP。</p>
+                    
+                    <div class="skills">
+                        <h3>AI 技能栈</h3>
+                        <ul>
+                            <li>大模型标注规则设计</li>
+                            <li>Prompt 工程</li>
+                            <li>数据质量管控</li>
+                            <li>RLHF 反馈机制</li>
+                            <li>Python 数据处理</li>
+                            <li>评测集构建</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="experience-section" style="margin-top: 50px;">
+            <h2 style="color: var(--accent-color); margin-bottom: 20px;">项目经历</h2>
+            <div class="news-grid">
+                <div class="news-card">
+                    <div class="news-source">项目经历</div>
+                    <h3>通用大模型指令微调 (SFT)</h3>
+                    <p class="news-summary">负责构建包含 10 万条高质量指令的 SFT 数据集，覆盖代码生成、逻辑推理等 10+ 个垂直领域。制定详细的标注规范，团队标注准确率提升至 98%。</p>
+                </div>
+                <div class="news-card">
+                    <div class="news-source">项目经历</div>
+                    <h3>医疗领域模型 RLHF 偏好标注</h3>
+                    <p class="news-summary">设计医疗场景下的 Reward Model 偏好标注标准，针对幻觉问题进行专项优化。通过多轮迭代，模型在医疗问答任务上的可用性显著提升。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 AI Trainer Portfolio. All Rights Reserved.</p>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
